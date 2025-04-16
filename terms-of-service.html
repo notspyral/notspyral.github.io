@@ -9,15 +9,20 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 2rem;
+            padding: 0; /* Remove padding to ensure full-width layout */
             background-color: #f9f9f9;
             color: #333;
         }
-        h1, h2 {
-            color: #000000;
+        header {
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            border-bottom: 2px solid #ddd;
+            padding: 1rem 0; /* Add padding to create space above and below the SVG */
+            text-align: center;
         }
         section {
             margin-bottom: 2rem;
+            padding: 0 2rem; /* Add padding to sections for better readability */
         }
         .back-button {
             display: inline-block;
@@ -44,7 +49,10 @@
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
-            border-top: 1px solid #ddd;
+            border-top: 2px solid #ddd;
+            width: 100%; /* Ensure the footer spans the full width */
+            position: relative; /* Ensure it stays within the flow of the document */
+            left: 0;
         }
     </style>
 </head>
@@ -101,7 +109,7 @@
         <a href="index.html" class="back-button">Back to Home</a>
     </main>
     <footer>
-        <p>&copy; 2025 Splitstorm. All rights reserved.</p>
+        <p>&copy; 2025 Max Borkowski and Nathan Baker. All rights reserved.</p>
     </footer>
 </body>
 </html>

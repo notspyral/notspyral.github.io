@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Splitstorm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column; /* Ensure header, main, and footer stack vertically */
+            min-height: 100vh;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding: 1.5rem 0;
+            width: 100%; /* Ensure the header spans the full width */
+        }
+        header img {
+            width: 200px; /* Slightly smaller logo */
+            height: auto;
+        }
+        .content-wrapper {
+            display: flex; /* Use flexbox to position the side menu and main content */
+            flex: 1; /* Allow the content wrapper to take up available space */
+        }
+        nav {
+            width: 200px; /* Fixed width for the side menu */
+            background: #f4f4f4;
+            padding: 2rem;
+            border-right: 1px solid #ddd;
+            height: auto; /* Adjust height to fit content */
+            position: sticky;
+            top: 0;
+        }
+        nav h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 0.5rem;
+        }
+        nav ul li button {
+            background: none;
+            border: none;
+            color: #4791ff;
+            text-align: left;
+            padding: 0;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        nav ul li button:hover {
+            text-decoration: underline;
+        }
+        nav ul li ul {
+            margin-left: 1rem;
+            display: none; /* Hide subsections by default */
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #4791ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .back-button:hover {
+            background-color: #247cff;
+        }
+        main {
+            flex: 1; /* Take up the remaining space */
+            padding: 4rem;
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 1rem 0;
+            border-top: 1px solid #ddd;
+            width: 100%; /* Ensure the footer spans the full width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/SPLITSTORM.svg" alt="Splitstorm Logo" aria-label="Splitstorm Logo">
+        </a>
+    </header>
+    <div class="content-wrapper">
+        <nav>
+            <h2>Table of Contents</h2>
+            <ul>
+                <li>
+                    <button onclick="toggleSubmenu('getting-started-menu')">Getting Started</button>
+                    <ul id="getting-started-menu">
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#first-steps">First Steps</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick="toggleSubmenu('account-management-menu')">Account Management</button>
+                    <ul id="account-management-menu">
+                        <li><a href="#create-account">Create an Account</a></li>
+                        <li><a href="#delete-account">Delete an Account</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick="toggleSubmenu('data-syncing-menu')">Data Syncing</button>
+                    <ul id="data-syncing-menu">
+                        <li><a href="#sync-setup">Sync Setup</a></li>
+                        <li><a href="#backup-data">Backup Data</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick="toggleSubmenu('troubleshooting-menu')">Troubleshooting</button>
+                    <ul id="troubleshooting-menu">
+                        <li><a href="#common-issues">Common Issues</a></li>
+                        <li><a href="#contact-support">Contact Support</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact-support">Contact Support</a></li>
+            </ul>
+            <a href="index.html" class="back-button">Back to Home</a>
+        </nav>
+        <main>
+            <h1>Help</h1>
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <section id="installation">
+                    <h3>Installation</h3>
+                    <p>Learn how to install the Splitstorm app on your device.</p>
+                </section>
+                <section id="first-steps">
+                    <h3>First Steps</h3>
+                    <p>Follow these steps to get started with Splitstorm.</p>
+                </section>
+            </section>
+            <section id="account-management">
+                <h2>Account Management</h2>
+                <section id="create-account">
+                    <h3>Create an Account</h3>
+                    <p>Steps to create a new Splitstorm account.</p>
+                </section>
+                <section id="delete-account">
+                    <h3>Delete an Account</h3>
+                    <p>Instructions on how to delete your Splitstorm account.</p>
+                </section>
+            </section>
+            <section id="data-syncing">
+                <h2>Data Syncing</h2>
+                <section id="sync-setup">
+                    <h3>Sync Setup</h3>
+                    <p>How to set up data syncing across devices.</p>
+                </section>
+                <section id="backup-data">
+                    <h3>Backup Data</h3>
+                    <p>Learn how to back up your data securely.</p>
+                </section>
+            </section>
+            <section id="troubleshooting">
+                <h2>Troubleshooting</h2>
+                <section id="common-issues">
+                    <h3>Common Issues</h3>
+                    <p>Solutions to common problems you may encounter.</p>
+                </section>
+            </section>
+            <section id="contact-support">
+                <h2>Contact Support</h2>
+                <p>If you need further assistance, feel free to contact us at <strong>splitstormapp@gmail.com</strong>.</p>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Max Borkowski and Nathan Baker. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleSubmenu(menuId) {
+            const submenu = document.getElementById(menuId);
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
